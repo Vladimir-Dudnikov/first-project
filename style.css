@@ -7,6 +7,7 @@
     top: 0px;
 }
 
+/* Навигация в header */
 .nav {
     position: absolute;
     width: 391.48px;
@@ -20,7 +21,6 @@
 }
 
 .nav-item {
-    margin-right: 32px;
     position: relative;
 }
 
@@ -66,6 +66,28 @@
     color: #000000;
 }
 
+/* Декоративные линии в навигации */
+.nav-item:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 130px;
+    top: 142px;
+    border: 0.5px solid #000000;
+}
+
+.nav-item:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    left: 312px;
+    top: 142px;
+    border: 0.5px solid #000000;
+}
+
+/* Логотип */
 .logo {
     position: absolute;
     width: 148px;
@@ -74,6 +96,12 @@
     top: 92px;
 }
 
+.logo__image {
+    width: 148px;
+    height: 105px;
+}
+
+/* Адрес в header */
 .address {
     position: absolute;
     width: 240px;
@@ -90,11 +118,22 @@
     line-height: 24px;
     color: #000000;
     display: block;
+}
+
+.address__link:nth-child(1) {
     position: absolute;
     width: 239.48px;
     height: 24px;
     left: 810.52px;
     top: 95px;
+}
+
+.address__link:nth-child(2) {
+    position: absolute;
+    width: 239.48px;
+    height: 24px;
+    left: 810px;
+    top: 119px;
 }
 
 .address__text {
@@ -111,7 +150,28 @@
     color: #000000;
 }
 
-/* Cover */
+/* Декоративные линии в адресе */
+.address__link:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    width: 131.71px;
+    height: 0px;
+    left: 810.52px;
+    top: 119px;
+    border: 1px solid #000000;
+}
+
+.address__link:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 129.72px;
+    height: 0px;
+    left: 810px;
+    top: 143px;
+    border: 1px solid #000000;
+}
+
+/* Cover Section */
 .cover {
     position: absolute;
     width: 1100px;
@@ -147,10 +207,11 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: #FFFFFF;
-    position: absolute;
+    display: block;
 }
 
 .cover__title-line_left {
+    position: absolute;
     width: 286px;
     height: 115px;
     left: 50px;
@@ -158,6 +219,7 @@
 }
 
 .cover__title-line_center {
+    position: absolute;
     width: 339px;
     height: 115px;
     left: calc(50% - 339px/2);
@@ -166,6 +228,7 @@
 }
 
 .cover__title-line_right {
+    position: absolute;
     width: 387px;
     height: 115px;
     left: 663px;
@@ -211,9 +274,10 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    background: transparent;
 }
 
-/* Lots */
+/* Lots Section */
 .lots {
     position: absolute;
     width: 1052px;
@@ -238,10 +302,9 @@
 }
 
 .lots__list {
-    position: absolute;
+    position: relative;
     width: 1052px;
     height: 596px;
-    left: 0px;
     top: 74px;
 }
 
@@ -285,6 +348,18 @@
     bottom: 0%;
 }
 
+.lot__image_type_film {
+    background: url(539fb54b8ac24568a59b4e0bffa1.jpg);
+}
+
+.lot__image_type_book {
+    background: url(136177-dzheyms-dzhoys-uliss.png);
+}
+
+.lot__image_type_picture {
+    background: url(3ZAGLAVNOE.jpg);
+}
+
 .lot__overlay {
     position: absolute;
     left: 0%;
@@ -319,7 +394,6 @@
 
 .lot__description {
     position: absolute;
-    height: 144px;
     left: 40px;
     right: 40px;
     bottom: 48px;
@@ -345,7 +419,7 @@
     color: #000000;
 }
 
-/* About */
+/* About Section */
 .about {
     position: absolute;
     width: 1052px;
@@ -355,11 +429,9 @@
 }
 
 .about__container {
-    position: absolute;
+    position: relative;
     width: 1052px;
     height: 595px;
-    left: 0px;
-    top: 0px;
 }
 
 .about__column_left {
@@ -368,6 +440,14 @@
     height: 240px;
     left: 47px;
     top: 35px;
+}
+
+.about__column_right {
+    position: absolute;
+    width: 693px;
+    height: 449px;
+    left: 359px;
+    top: 133px;
 }
 
 .about__logo {
@@ -388,12 +468,14 @@
     border-radius: 50%;
 }
 
-.about__column_right {
+.about__logo-image::before {
+    content: "";
     position: absolute;
-    width: 693px;
-    height: 449px;
-    left: 359px;
-    top: 133px;
+    width: 148px;
+    height: 114px;
+    left: calc(50% - 148px/2 + 0.48px);
+    top: calc(50% - 114px/2 + 1px);
+    border: 6px solid #FFFFFF;
 }
 
 .about__title {
@@ -428,7 +510,7 @@
     color: #000000;
 }
 
-.about__paragraph:first-child {
+.about__paragraph:nth-child(1) {
     position: absolute;
     width: 688px;
     height: 120px;
@@ -436,7 +518,7 @@
     top: 150px;
 }
 
-.about__paragraph:last-child {
+.about__paragraph:nth-child(2) {
     position: absolute;
     width: 693px;
     height: 168px;
@@ -469,6 +551,17 @@
     line-height: 24px;
     color: #000000;
     display: block;
+}
+
+.footer__address-link:nth-child(1) {
+    position: absolute;
+    width: 264px;
+    height: 24px;
+    left: 50.57px;
+    top: 0px;
+}
+
+.footer__address-link:nth-child(2) {
     position: absolute;
     width: 264px;
     height: 24px;
@@ -488,6 +581,27 @@
     font-size: 18px;
     line-height: 24px;
     color: #000000;
+}
+
+/* Декоративные линии в footer адресе */
+.footer__address-link:nth-child(1)::after {
+    content: "";
+    position: absolute;
+    width: 131px;
+    height: 0px;
+    left: 51px;
+    top: 24px;
+    border: 1px solid #000000;
+}
+
+.footer__address-link:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    width: 131px;
+    height: 0px;
+    left: 51px;
+    top: 48px;
+    border: 1px solid #000000;
 }
 
 .footer__nav {
@@ -547,6 +661,27 @@
     color: #000000;
 }
 
+/* Декоративные линии в footer навигации */
+.footer__nav-link-main::after {
+    content: "";
+    position: absolute;
+    width: 146px;
+    height: 0px;
+    left: calc(50% - 146px/2 + 0.6px);
+    top: 44px;
+    border: 1px solid #000000;
+}
+
+.footer__nav-link-lots::after {
+    content: "";
+    position: absolute;
+    width: 107px;
+    height: 0px;
+    left: calc(50% - 107px/2 + 0.1px);
+    top: 65px;
+    border: 1px solid #000000;
+}
+
 .footer__social-list {
     display: flex;
     flex-direction: row;
@@ -573,6 +708,7 @@
     display: block;
     text-indent: -9999px;
     overflow: hidden;
+    position: relative;
 }
 
 .footer__social-icon_type_yt {
