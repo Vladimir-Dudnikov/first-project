@@ -17,15 +17,19 @@
 
 .nav-list {
     display: flex;
-    gap: 32px;
 }
 
 .nav-item {
-    display: flex;
-    align-items: center;
+    margin-right: 32px;
+    position: relative;
 }
 
-.nav-link {
+.nav-link-main {
+    position: absolute;
+    width: 67px;
+    height: 21px;
+    left: 50px;
+    top: 133px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -34,6 +38,35 @@
     color: #000000;
 }
 
+.nav-link-lots {
+    position: absolute;
+    width: 149px;
+    height: 21px;
+    left: 148.48px;
+    top: 133px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+.nav-link-auction {
+    position: absolute;
+    width: 108px;
+    height: 21px;
+    left: 331.48px;
+    top: 133px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #000000;
+}
+
+/* Logo */
 .logo {
     position: absolute;
     width: 148px;
@@ -42,38 +75,57 @@
     top: 92px;
 }
 
-.logo-image {
+.logo__image {
     width: 148px;
     height: 105px;
 }
 
+/* Address */
 .address {
     position: absolute;
     width: 240px;
     height: 98px;
     right: 50px;
     top: 95px;
-    text-align: right;
 }
 
-.address-link {
+.address__link {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
     display: block;
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    color: #000000;
 }
 
-.address-text {
+.address__link:first-child {
+      position: absolute;
+      width: 260.7px;
+      height: 49px;
+      left: 51.1px;
+      top: 49px;
+
+     font-family: 'Raleway';
+     font-style: normal;
+     font-weight: 400;
+     font-size: 18px;
+     line-height: 24px;
+     color: #000000;
+}
+
+.address__text {
+    position: absolute;
+    width: 236.49px;
+    height: 49px;
+    left: 811px;
+    top: 144px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
-    margin-top: 5px;
 }
 
 /* Cover */
@@ -83,10 +135,9 @@
     height: 757px;
     left: 0px;
     top: 293px;
-    background: url('images/cover.jpg');
 }
 
-.cover-overlay {
+.cover__overlay {
     position: absolute;
     width: 1100px;
     height: 757px;
@@ -96,7 +147,7 @@
     opacity: 0.6;
 }
 
-.cover-title {
+.cover__title {
     position: absolute;
     width: 1000px;
     height: 385px;
@@ -104,8 +155,7 @@
     top: 165px;
 }
 
-.cover-title-line {
-    display: block;
+.cover__title-line {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
@@ -114,46 +164,49 @@
     letter-spacing: 0.3em;
     text-transform: uppercase;
     color: #FFFFFF;
-    position: absolute;
+    display: block;
 }
 
-.cover-title-line_left {
+.cover__title-line_left {
+    position: absolute;
     width: 286px;
     height: 115px;
-    left: 0px;
-    top: 0px;
+    left: 50px;
+    top: 165px;
 }
 
-.cover-title-line_center {
+.cover__title-line_center {
+    position: absolute;
     width: 339px;
     height: 115px;
-    left: 330px;
-    top: 135px;
+    left: calc(50% - 339px/2);
+    top: 300px;
     text-align: center;
 }
 
-.cover-title-line_right {
+.cover__title-line_right {
+    position: absolute;
     width: 387px;
     height: 115px;
-    right: 0px;
-    top: 270px;
+    left: 663px;
+    top: 435px;
     text-align: right;
 }
 
-.cover-description {
+.cover__description {
     position: absolute;
     width: 1000px;
     height: 51px;
     left: 50px;
     top: 656px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
-.cover-description-text {
+.cover__description-text {
+    position: absolute;
     width: 637px;
     height: 28px;
+    left: 50px;
+    top: 668px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -163,9 +216,12 @@
     color: #FFFFFF;
 }
 
-.cover-description-button {
+.cover__description-button {
+    position: absolute;
     width: 256px;
     height: 51px;
+    left: 794px;
+    top: 656px;
     border: 1px solid #FFFFFF;
     font-family: 'Raleway';
     font-style: normal;
@@ -175,9 +231,6 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 /* Lots */
@@ -189,7 +242,7 @@
     top: 1230px;
 }
 
-.lots-title {
+.lots__title {
     position: absolute;
     width: 121px;
     height: 47px;
@@ -204,83 +257,108 @@
     color: #000000;
 }
 
-.lots-list {
+.lots__list {
     position: absolute;
     width: 1052px;
     height: 596px;
     left: 0px;
     top: 74px;
-    display: flex;
-    gap: 25px;
 }
 
-.lots-item {
-    flex: 1;
-    position: relative;
+.lots__item_1 {
+    position: absolute;
+    width: 334px;
+    height: 596px;
+    left: 0px;
+    top: 74px;
 }
 
-.lot-link {
+.lots__item_2 {
+    position: absolute;
+    width: 334px;
+    height: 596px;
+    left: 359px;
+    top: 74px;
+}
+
+.lots__item_3 {
+    position: absolute;
+    width: 334px;
+    height: 596px;
+    left: 718px;
+    top: 74px;
+}
+
+.lot__link {
     display: block;
+    width: 100%;
     height: 100%;
     color: #FFFFFF;
 }
 
 .lot {
     position: relative;
-    width: 334px;
-    height: 596px;
+    width: 100%;
+    height: 100%;
 }
 
-.lot-image {
+.lot__image {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-position: center;
+    left: 0%;
+    top: 0%;
 }
 
-.lot-image_type_film {
-    background: url('images/lot-1.jpg');
+.lot__image_type_film {
+    background: url(539fb54b8ac24568a59b4e0bffa1.jpg);
 }
 
-.lot-image_type_book {
-    background: url('images/lot-2.jpg');
+.lot__image_type_book {
+    background: url(136177-dzheyms-dzhoys-uliss.png);
 }
 
-.lot-image_type_picture {
-    background: url('images/lot-3.jpg');
+.lot__image_type_picture {
+    background: url(3ZAGLAVNOE.jpg);
 }
 
-.lot-overlay {
+.lot__overlay {
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0%;
+    top: 0%;
     background: rgba(0, 0, 0, 0.6);
 }
 
-.lot-content {
+.lot__content {
     position: absolute;
     width: 100%;
     height: 100%;
     padding: 48px 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
-.lot-title {
+.lot__title {
+    position: absolute;
     height: 110px;
+    left: 40px;
+    right: 40px;
+    top: 48px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 700;
     font-size: 22px;
     line-height: 120%;
-    text-decoration: underline;
+    text-decoration-line: underline;
     text-transform: uppercase;
     color: #FFFFFF;
 }
 
-.lot-description {
+.lot__description {
+    position: absolute;
+    left: 40px;
+    right: 40px;
+    bottom: 48px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -289,7 +367,7 @@
     color: #FFFFFF;
 }
 
-.lots-more-link {
+.lots__more-link {
     position: absolute;
     width: 192px;
     height: 23px;
@@ -301,7 +379,6 @@
     font-size: 20px;
     line-height: 23px;
     color: #000000;
-    text-decoration: underline;
 }
 
 /* About */
@@ -313,24 +390,15 @@
     top: 2073px;
 }
 
-.about-container {
+.about__container {
     position: absolute;
     width: 1052px;
     height: 595px;
-    display: flex;
-    gap: 25px;
+    left: 0px;
+    top: 0px;
 }
 
-.about-column {
-    position: relative;
-}
-
-.about-column_left {
-    width: 334px;
-    height: 595px;
-}
-
-.about-logo {
+.about__column_left {
     position: absolute;
     width: 240px;
     height: 240px;
@@ -338,31 +406,33 @@
     top: 35px;
 }
 
-.about-logo-image {
+.about__logo {
     position: absolute;
     width: 240px;
     height: 240px;
+    right: 0px;
+    top: 0px;
+}
+
+.about__logo-image {
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    left: calc(50% - 240px/2);
+    top: calc(50% - 240px/2);
     background: #000000;
     border-radius: 50%;
 }
 
-.about-logo-white {
+.about__column_right {
     position: absolute;
-    width: 148px;
-    height: 114px;
-    left: 46px;
-    top: 63px;
-    border: 6px solid #FFFFFF;
-}
-
-.about-column_right {
     width: 693px;
     height: 449px;
     left: 359px;
     top: 133px;
 }
 
-.about-title {
+.about__title {
     position: absolute;
     width: 291px;
     height: 47px;
@@ -377,7 +447,7 @@
     color: #000000;
 }
 
-.about-text {
+.about__text {
     position: absolute;
     width: 693px;
     height: 312px;
@@ -385,14 +455,29 @@
     top: 150px;
 }
 
-.about-paragraph {
+.about__paragraph {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
     color: #000000;
-    margin-bottom: 24px;
+}
+
+.about__paragraph:first-child {
+    position: absolute;
+    width: 688px;
+    height: 120px;
+    left: 0px;
+    top: 150px;
+}
+
+.about__paragraph:last-child {
+    position: absolute;
+    width: 693px;
+    height: 168px;
+    left: 0px;
+    top: 294px;
 }
 
 /* Footer */
@@ -402,55 +487,73 @@
     height: 180px;
     left: 0px;
     top: 2848px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0 50px;
 }
 
-.footer-address {
+.footer__address {
+    position: absolute;
     width: 264.57px;
     height: 98px;
+    left: 50px;
+    top: 0px;
 }
 
-.footer-address-link {
+.footer__address-link {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
     display: block;
+}
+
+.footer__address-link{
+  position: absolute;
+  width: 260.7px;
+  height: 49px;
+  left: 51.1px;
+  top: 49px;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.footer__address-text {
+    position: absolute;
+    width: 260.7px;
+    height: 49px;
+    left: 51.1px;
+    top: 49px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 24px;
     color: #000000;
-    text-decoration: underline;
 }
 
-.footer-address-text {
-    font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 24px;
-    color: #000000;
-    margin-top: 5px;
-}
-
-.footer-nav {
+.footer__nav {
     position: absolute;
     width: 163.9px;
     height: 64px;
-    left: 468px;
+    left: calc(50% - 163.9px/2 + 0.55px);
     top: 1px;
 }
 
-.footer-nav-list {
+.footer__nav-list {
     text-align: center;
 }
 
-.footer-nav-item {
-    margin-bottom: 21px;
-}
-
-.footer-nav-link {
+.footer__nav-link-main {
+    position: absolute;
+    width: 73.7px;
+    height: 21px;
+    left: calc(50% - 73.7px/2 + 0.55px);
+    top: 1px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
@@ -458,49 +561,80 @@
     line-height: 21px;
     text-align: center;
     color: #000000;
-    display: block;
-    text-decoration: underline;
 }
 
-.footer-social-list {
+.footer__nav-link-lots {
+    position: absolute;
+    width: 163.9px;
+    height: 21px;
+    left: calc(50% - 163.9px/2 + 0.55px);
+    top: 22px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+.footer__nav-link-auction {
+    position: absolute;
+    width: 118.8px;
+    height: 21px;
+    left: calc(50% - 118.8px/2);
+    top: 43px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    color: #000000;
+}
+
+.footer__social-list {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     padding: 0px;
     gap: 48px;
+    position: absolute;
     width: 240px;
     height: 48px;
+    right: 50px;
+    top: 1px;
 }
 
-.footer-social-item {
+.footer__social-item {
     width: 48px;
     height: 48px;
 }
 
-.footer-social-link {
+.footer__social-link {
     display: block;
     width: 48px;
     height: 48px;
 }
 
-.footer-social-icon {
-    display: block;
+.footer__social-icon {
     width: 48px;
     height: 48px;
+    display: block;
     border: 1px solid #000000;
     border-radius: 50%;
     text-indent: -9999px;
     overflow: hidden;
 }
 
-.footer-social-icon_type_yt {
+.footer__social-icon_type_yt {
     background: #000000;
 }
 
-.footer-social-icon_type_vk {
+.footer__social-icon_type_vk {
     background: #000000;
 }
 
-.footer-social-icon_type_pinterest {
+.footer__social-icon_type_pinterest {
     background: #000000;
 }
