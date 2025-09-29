@@ -1,1 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    background: #FFFFFF;
+    color: #000000;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font: inherit;
+}
+
+address {
+    font-style: normal;
+}
+
+ul, ol {
+    list-style: none;
+}
