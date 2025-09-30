@@ -129,7 +129,7 @@
 .cover__title-line {
     position: absolute;
     font-family: 'Raleway';
-    font-style: normal;
+    font-style: bold;
     font-weight: 700;
     font-size: 100px;
     line-height: 115%;
@@ -516,3 +516,4 @@
     justify-content: center;
     font-size: 0;
 }
+
